@@ -158,9 +158,13 @@
 {% endblock dashboard_content %}
 
 
-{% block extrascripts %}
+{% block cdn_scripts %}
 {{ block.super }}
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+{% endblock %}
+
+{% block extrascripts %}
+{{ block.super }}
 <script type="text/javascript" src="{% static "js/dashboard.js" %}"></script>
 <script type="text/javascript" src="{% static "js/stores.js" %}"></script>
 {% endblock %}
