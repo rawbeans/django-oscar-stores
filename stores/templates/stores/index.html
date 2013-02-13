@@ -1,4 +1,4 @@
-{% extends "oscar/layout.html" %}
+{% extends "layout.html" %}
 {% load i18n %}
 {% load staticfiles %}
 {% load thumbnail %}
@@ -93,9 +93,14 @@
 
 {% endblock %}
 
+{% block cdn_scripts %}
+    {{ block.super }}
+    {% include "stores/partials/extracdnscripts.html" %}
+{% endblock %}
+
 {% block extrascripts %}
-{{ block.super }}
-{% include "stores/partials/extrascripts.html" %}
+    {{ block.super }}
+    {% include "stores/partials/extrascripts.html" %}
 {% endblock %}
 
 {% block onbodyload %}

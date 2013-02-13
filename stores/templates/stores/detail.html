@@ -1,4 +1,4 @@
-{% extends "oscar/layout.html" %}
+{% extends "layout.html" %}
 {% load i18n %}
 {% load thumbnail %}
 
@@ -51,6 +51,11 @@
             </section>
         </div>
     </div>
+{% endblock %}
+
+{% block cdn_scripts %}
+    {{ block.super }}
+    {% include "stores/partials/extracdnscripts.html" %}
 {% endblock %}
 
 {% block extrascripts %}
