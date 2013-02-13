@@ -29,13 +29,6 @@
                     {{ form.store_search }}
                     <button type="submit" class="icon-search"></button>
                 </div>
-                <h3>{% trans "Filter by group" %}</h3>
-                {{ form.group }}
-                {% comment %}
-                <label class="checkbox pull-left">
-                    <input type="checkbox">{% trans "Show stores opening soon" %}
-                </label>
-                {% endcomment %}
             </form>
             <ul class="nav nav-tabs nav-stacked">
             {% for store in store_list %}
