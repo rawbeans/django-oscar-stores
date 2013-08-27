@@ -4,11 +4,11 @@
 {% block breadcrumbs %}
 <ul class="breadcrumb">
     <li>
-        <a href="{% url dashboard:index %}">{% trans "Dashboard" %}</a>
+        <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
         <span class="divider">/</span>
     </li>
     <li>
-        <a href="{% url stores-dashboard:store-list %}">{% trans "Stores" %}</a>
+        <a href="{% url 'stores-dashboard:store-list' %}">{% trans "Stores" %}</a>
         <span class="divider">/</span>
     </li>
     <li>
@@ -32,7 +32,7 @@
     <div class="form-actions">
         <button type="submit" class="btn btn-large btn-danger">{% trans "Delete" %}</button>
         {% trans "or" %} 
-        <a href="{% url stores-dashboard:store-list %}">{% trans "cancel" %}</a>.
+        <a href="{% url 'stores-dashboard:store-list' %}">{% trans "cancel" %}</a>.
     </div>
 </form>
 {% endblock %}
